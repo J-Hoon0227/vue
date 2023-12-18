@@ -30,6 +30,13 @@ public class SwaggerController {
     public String context() {
         return "예시 context API";
     }
+
+    @Operation(summary = "숫자 반복", description = "파라미터로 받은 숫자를 2번 반복합니다.")
+    @Parameter(name = "int", description = "숫자를 입력")
+    @GetMapping("/moon")
+    public String moon(){
+        return "병창님 API";
+    }
  
     @Hidden
     @GetMapping("/ignore")
